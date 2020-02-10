@@ -1,5 +1,5 @@
 # OneNet-IoT
-**Note：**基于OneNet平台okHttp协议的远程环境监控App开发
+**Note:** 基于OneNet平台okHttp协议的远程环境监控App开发
 
  OneNET平台作为连接和数据的中心，能适应各种传感网络和通信网络，将面向智能家居、可穿戴设备、车联网、移动健康、智能创客等多个领域开放。 
 
