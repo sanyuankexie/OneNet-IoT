@@ -1,0 +1,101 @@
+/*
+在线json可视化:https://www.bejson.com/jsonviewernew/  
+*/
+
+/*
+ *实例：获得数据流的json格式——get请求获得onenet平台数据
+ *url："https://api.heclouds.com/devices/"+device_ID+"/datastreams" # 数据流
+ */
+{
+  "errno": 0,
+  "data": [
+    {
+      "unit": "摄氏度",
+      "unit_symbol": "℃",
+      "create_time": null,
+      "update_at": "2020-02-10 17:11:39",
+      "id": "temperature",
+      "current_value": 86
+    },
+    {
+      "unit": "相对浓度",
+      "unit_symbol": "%HR",
+      "create_time": null,
+      "update_at": "2020-02-10 17:11:39",
+      "id": "humidity",
+      "current_value": 88
+    },
+    {
+      "unit": "毫升/立方米",
+      "unit_symbol": "mL/m³",
+      "create_time": null,
+      "update_at": "2020-02-10 17:11:39",
+      "id": "carbon",
+      "current_value": 94
+    },
+    {
+      "unit": "克/立方米",
+      "unit_symbol": "g/m³",
+      "create_time": null,
+      "update_at": "2020-02-10 17:11:39",
+      "id": "smokescope",
+      "current_value": 17
+    }
+  ],
+  "error": "succ"
+}
+
+/*
+ *实例：发送成功并返回确认的json格式
+ */
+{"errno":0,"error":"succ"}
+
+/*
+ *实例：获得数据点的json格式——post请求发送数据至onenet平台
+ *url："https://api.heclouds.com/devices/"+device_ID+"/datapoints" #数据点
+ */
+{
+  "errno": 0,
+  "data": {
+    "count": 4,
+    "datastreams": [
+      {
+        "datapoints": [
+          {
+            "at": "2020-02-10 17:25:01.977",
+            "value": 64
+          }
+        ],
+        "id": "carbon"
+      },
+      {
+        "datapoints": [
+          {
+            "at": "2020-02-10 17:25:01.977",
+            "value": 67
+          }
+        ],
+        "id": "temperature"
+      },
+      {
+        "datapoints": [
+          {
+            "at": "2020-02-10 17:25:01.977",
+            "value": 75
+          }
+        ],
+        "id": "humidity"
+      },
+      {
+        "datapoints": [
+          {
+            "at": "2020-02-10 17:25:01.978",
+            "value": 30
+          }
+        ],
+        "id": "smokescope"
+      }
+    ]
+  },
+  "error": "succ"
+}
